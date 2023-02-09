@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% csrf_token %}
+    <center><div style="border: 1px;">
+    <img src="{{ data.Photo.url }}" alt="No Img" height="75px" width="75px">
+    <br>
+    <p>{{ data.Name }}</p>
+    <p> {{ data.Place }}</p>
+    <a href="{% url 'app8:update' data.id %}">Update Account</a>
+    <a href="{% url 'app8:logout' %}">Log Out</a>
+    <a href="{% url 'app8:changepassword' data.id %}">change password</a>
+    </div></center>
+    {% endblock %}

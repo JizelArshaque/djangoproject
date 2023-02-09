@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+    <div class="row">
+    {% for data in data %}
+    <div class="col-sm-4">
+        <a href="{% url 'app8:pic1' data.id %}"><img src="{{ data.Photo.url }}" alt="No Img" height="150px" width="225px"></a>
+    <br>
+    <p>{{ data.Name }}</p>
+
+    </div> 
+    {% endfor %}
+</div>
+</div>   
+{% endblock %}       

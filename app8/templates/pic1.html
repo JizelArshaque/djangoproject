@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+<style>
+h5,p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+    text-align: top;
+}
+
+img { 
+  width: 50%;
+  height: auto;
+  float: left;
+
+}
+</style>
+</head>
+<body>
+<img src="{{ data.Photo.url }}" width="100" height="50px" alt="My Image">
+<h5>BRAND</h5>
+<p>{{ data.Brand }}</p>
+<h5>MODEL</h5>
+<p>{{ data.Name }}</p>
+<h5>PRICE</h5>
+<p>{{ data.Price }}</p>
+{% endblock %}
